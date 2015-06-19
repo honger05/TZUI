@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>clearfix</title>
+	<style>
+		.menu {
+			list-style: none;
+		}
+		.menu li {
+			width: 100px;
+			height: 30px;
+			border: 1px solid red;
+			float: left;
+		}
+		.box1 {
+			width: 200px;
+			height: 200px;
+			border: 1px solid blue;
+		}
+		/*目的是创建一个隐形的内容为空的块来为目标元素清除浮动<div style="clear: both"></div>*/
+		.clearfix:before, .clearfix:after {
+			content: "ni hao a";
+			clear: both;
+			display: block;
+			/*visibility: hidden;
+			height: 0;
+			font-size: 0;*/
+		}
+		/*在IE6, 7下zoom: 1会触发hasLayout，从而使元素闭合内部的浮动*/
+		.clearfix {
+			zoom: 1;
+		}
+
+
+	</style>
+</head>
+<body>
+	<ul class="menu clearfix">
+		<li>clearfix</li>
+		<li>clearfix</li>
+		<li>clearfix</li>
+		<li>clearfix</li>
+		<li>clearfix</li>
+	</ul>
+	<div class="box1"></div>
+</body>
+</html>

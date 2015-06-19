@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab 样式</title>
+	<style>
+		body {
+			font-size: 12px;
+		}
+
+		.container {
+			width: 900px;
+			margin: 20px auto;
+			border: 1px solid #ccc;
+			padding: 20px;
+		}
+
+		ul, ol {
+			padding: 0;
+			margin: 0;
+			list-style: none
+		}
+
+		a:link, a:visited {
+			color: #08c;
+		}
+
+		a:hover {
+			color: #08c;
+		}
+
+		ins, a {
+			text-decoration: none;
+		}
+
+		.tab1 {
+			padding: 15px 0 4px 0;
+			border-bottom: 1px solid #999;
+			background-color: #ccc;
+			font-size: 0;
+		}
+	
+		.tab1 li {
+			display: inline-block;
+			margin-left: 10px;
+
+			font-size: 12px;
+
+			*display: inline;
+			*zoom: 1;
+		}
+
+		.tab1 li a {
+			background: #fff;
+			padding: 5px 10px;
+			border: 1px solid #999;
+			border-radius: 5px 5px 0 0;
+		}
+
+		.tab1 li a:hover {
+			background: #ccc;
+		}
+
+		.tab1 li a.active {
+			color: red;
+			background: #d5d5d5;
+			border: 1px solid #999;
+			border-bottom-color: transparent;
+			cursor: default;
+		}
+
+		.content > div{
+			border-bottom: 1px solid #999;
+			border-right: 1px solid #999;
+			border-left: 1px solid #999;
+			background: #d5d5d5;
+			padding: 30px;
+		}
+
+		/* tab2 利用css3来修饰 */
+		.tab2:after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
+
+		.tab2 {
+			*zoom: 1;
+			border-bottom: 1px solid #C5B6B6;
+			background-color: #ccc;
+			padding-top: 10px;
+		}
+
+		.tab2 ul li {
+			position: relative;
+			display: block;
+			float: left;
+			margin-bottom: -1px;
+			margin-left: 2px;
+		}
+
+		.tab2 ul li a {
+			display: block;
+			padding: 5px 15px;
+			border-radius: 5px 5px 0 0;
+			color: #555;
+		}
+
+		.tab2 ul li a:hover {
+			background-color: #ddd;
+			border: 1px solid #C5B6B6;
+			border-bottom-color: transparent;
+		}
+
+		.tab2 ul li.active a, .tab2 ul li.active a:hover, .tab2 ul li.active a:focus {
+			color: red;
+			background-color: #eee;
+			border: 1px solid #C5B6B6;
+			border-bottom-color: transparent;
+			cursor: default;
+		}
+
+		.button-tabs .tab-item-text {
+			display: block;
+			padding: 5px 10px;
+			position: relative;
+			border-radius: 4px;
+			margin-left: 5px;
+			margin-bottom: 5px;
+		}
+
+		.button-tabs .tab-item-text:hover {
+			background-color: #eee;
+			cursor: pointer;
+		}
+
+		.button-tabs .active, .button-tabs .active:hover {
+			color: #fff;
+			background-color: #555;
+			cursor: default;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<p>inline-block</p>
+		<ul class="tab1">
+			<li><a href="#">首页</a></li>
+			<li><a href="#" class="active">技术文章</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+		<div class="content">
+			<div>bla bla ...</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<p>float</p>
+		<div class="tab2">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li class="active"><a href="#">技术文章</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="content2">
+			<div>bla bla ...</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<p>按钮标签</p>
+		<div class="tab2">
+			<ul class="tab button-tabs">
+				<li><span class="tab-item-text">首页</span></li>
+				<li><span class="tab-item-text active">技术文章</span></li>
+				<li><span class="tab-item-text">联系我们</span></li>
+			</ul>
+		</div>
+		<div class="content2">
+			<div>bla bla ...</div>
+		</div>
+	</div>
+
+</body>
+</html>

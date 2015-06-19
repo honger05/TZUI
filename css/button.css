@@ -1,0 +1,172 @@
+/* 基础样式 */
+.ui-btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    *overflow: visible;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;/* 文本不换行 */
+    letter-spacing: 1px;/* 字符间距：增加或减少字符间的空白 （normal=0） */
+    word-spacing: normal;/* 单词间距 */
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 0 15px;
+    background-image: none;
+    line-height: 28px;
+    height: 28px;
+    outline: none;
+}
+
+.ui-btn:hover,
+.ui-btn:focus {
+    text-decoration: none;
+    background-image: none;
+}
+
+.ui-btn:active, 
+.ui-btn.active {
+    position: relative;
+    top: 1px;
+    box-shadow: 1px 1px 3px #999 inset;
+}
+
+/* 颜色 */
+.ui-btn-default {
+    color: #676d70;
+    border: 1px solid #8e8e8e;
+    background-color: #f3f3f3;
+}
+
+.ui-btn-default:hover {
+    background-color: #fcfbfb;
+}
+
+a.ui-btn-default,
+a.ui-btn-default:active,
+a.ui-btn-default:hover {
+    color: #676d70;
+}
+
+.ui-btn-green {
+    color: #fff;
+    border: 1px solid #379000;
+    background-color: #4BB402;
+}
+
+.ui-btn-green:hover {
+    background-color: #66BC2A;
+}
+
+a.ui-btn-green,
+a.ui-btn-green:active,
+a.ui-btn-green:hover {
+    color: #fff;
+}
+
+.ui-btn-orange {
+    color: #fff;
+    border: 1px solid #d66500;
+    background-color: #f57403;
+}
+
+.ui-btn-orange:hover {
+    background-color: #fb8318;
+}
+
+a.ui-btn-orange,
+a.ui-btn-orange:active,
+a.ui-btn-orange:hover {
+    color: #fff;
+}
+
+.ui-btn-blue {
+    color: #fff;
+    border: 1px solid #154c67;
+    background-color: #005ba1;
+}
+
+.ui-btn-blue:hover {
+    background-color: #007ab8;
+}
+
+a.ui-btn-blue,
+a.ui-btn-blue:active,
+a.ui-btn-blue:hover {
+    color: #fff;
+}
+
+/* disabled */
+.ui-btn-disabled,
+.ui-btn[disabled] {
+    color: #999;
+    border: none;
+    background: #cacccd;
+    cursor: default!important;
+}
+
+/* 避免 a 有全局颜色 */
+a.ui-btn-disabled,
+a.ui-btn[disabled]
+a.ui-btn-disabled:active,
+a.ui-btn[disabled]:active,
+a.ui-btn-disabled:hover,
+a.ui-btn[disabled]:hover {
+    color: #999;
+}
+
+.ui-btn-disabled:active,
+.ui-btn[disabled]:active {
+    position: static;
+    top: 0;
+    box-shadow: none;
+}
+
+/* 大小 large small medium */
+.ui-btn-large {
+    line-height: 32px;
+    height: 32px;
+}
+
+.ui-btn-small {
+    line-height: 24px;
+    height: 24px;
+}
+
+/* 彩色按钮 */
+.ui-btn-c1 {
+    color: #fff;
+    border: 1px solid #8A2BE2;
+    background-color: #6A5ACD;
+}
+
+.ui-btn-c1:hover {
+    background-color: #7B68EE;
+}
+
+a.ui-btn-c1,
+a.ui-btn-c1:hover,
+a.ui-btn-c1:active {
+    color: #fff;
+}
+
+.ui-btn-c2 {
+    color: #fff;
+    border: 1px solid #3CB371;
+    background-color: #228B22;
+}
+
+.ui-btn-c2:hover {
+    background-color: #32CD32;
+}
+
+a.ui-btn-c2,
+a.ui-btn-c2:hover,
+a.ui-btn-c2:active {
+    color: #fff;
+}

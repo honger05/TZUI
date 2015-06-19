@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>inline-block 消除距离</title>
+	<style>
+		/* 根本原因是： inline 元素固有属性，换行符、回车符等构成的空白符 white space . 
+			距离大小与 font-size 有关。
+			低版本的 chrome 浏览器为了不让文字过小不利于阅读，默认是不支持 font-size:0 的，还好我们有 -webkit-text-size-adjust 这个私有属性来控制，当设为 none 时就支持字体大小为 0 了
+		*/
+		/* 测试表明：删除换行符，inline 元素间的空隙就消失了。 */
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			/* 所有浏览器 */
+			font-size: 0;
+			/* IE 6/7 */
+			*word-spacing: -1px;
+		}
+
+		ul li {
+			display: inline-block;
+			width: 100px;
+			height: 30px;
+			border: 1px solid red;
+
+			/* 上一级包装之后，恢复正常 */
+			font-size: 12px;
+			letter-spacing: normal;/* 文字之间距离 */
+			word-spacing: normal;/* 单词之间距离 */
+			vertical-align: top;
+
+			/* IE 6/7 */
+			/* 测试表明：IE6 中 inline 元素只要触发了 hasLayout ，其表现就类似于 inline-block */
+			*display: inline;/* 强制其不换行 */
+			*zoom: 1;/* 触发haslayout，可以设置宽高，并且不会产生 4px 的距离 */
+		}
+	</style>
+</head>
+<body>
+	
+	<ul>
+		<li>tset1</li>
+		<li>tset2</li>
+		<li>tset3</li>
+	</ul>
+
+</body>
+</html>
