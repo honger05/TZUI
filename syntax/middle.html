@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Middle</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.middle {
+			width: 500px;
+			height: 400px;
+			border: 1px solid #ccc;
+			position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0;
+			margin: auto;
+		}
+
+		.container {
+			width: 100px;
+			height: inherit;
+			margin: 0 auto;
+		}
+
+		.vc {
+			height: inherit;
+			display: table-cell;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="middle">
+		<div class="container">
+			<p class="vc">居中文本</p>
+		</div>
+	</div>
+
+</body>
+</html>

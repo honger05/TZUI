@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+	<style>
+	/* 其中“deg”是“度”的意思，如“10deg”表示“10度” */
+
+	/* rotate 旋转 */
+	.transform1 {
+		-webkit-transform: rotate(10deg);
+		-moz-transform: rotate(10deg);
+	}
+
+	/* skew 倾斜 */
+	.transform2 {
+		-webkit-transform:skew(20deg);
+		-moz-transform:skew(20deg)
+	}
+
+	/* 比例；“1.5”表示以1.5的比例放大，如果要放大2倍，须写成“2.0”，缩小则为负“-” */
+	.transform3 {
+		-webkit-transform:scale(1.5);
+		-moz-transform:scale(1.5);
+	}
+
+	/* 变动，位移；如下表示向右位移120像素，如果向上位移，把后面的“0”改个值就行，向左向下位移则为负“- */
+	.transform4 {
+		-webkit-transform:translate(120px,0);
+		-moz-transform:translate(120px,0);
+	}
+
+	/* transform 综合实例 */
+	.transform5 {
+		-webkit-transition:all 1s ease-in-out;
+		-moz-transition:all 1s ease-in-out;
+	}
+
+	.transform5:hover {
+		-webkit-transform:rotate(360deg) skew(-20deg) scale(3.0) translate(100px,0);
+		-moz-transform:rotate(360deg) skew(-20deg) scale(3.0) translate(100px,0);
+	}
+
+	.transform {
+		margin: 30px 0 80px 0;
+		width: 200px;
+		height: 50px;
+		font-size: 18px;
+		font-weight: bold;
+		background: #DEE4EE;
+		color: #305999;
+		text-align: center;
+		line-height: 50px;
+	}
+	</style>
+</head>
+<body>
+	<div class="transform transform1">transform</div>
+	<div class="transform transform2">transform</div>
+	<div class="transform transform3">transform</div>
+	<div class="transform transform4">transform</div>
+	<div class="transform transform5">transform</div>
+</body>
+</html>
